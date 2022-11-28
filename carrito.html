@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../JS/variables.js"></script>
+    <script defer src="../JS/carrito.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>K'AAY</title>
+</head>
+
+<body>
+    <!-- inicia header -->
+    <header>
+        <div>
+            <img src="../assets/imagenes/clef-music-symbol-vector.png" alt="img-logo" class="img-logo">
+        </div>
+        <h1>K'AAY</h1>
+        <div class="buscador">
+            <label for="nombre"></label>
+            <input id="buscar" name="buscar" type="text" placeholder="🔍 Buscar" minlength="3" maxlength="50">
+        </div>
+        <div class="img-carrito">
+            <img src="../assets/imagenes/icons8-carrito-de-compras-48.png" alt="carrito">
+        </div>
+    </header>
+
+    <!-- inicia main -->
+
+    <main class="main-carrito">
+
+        <h2>CARRITO</h2>
+
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ALBUM</th>
+                        <th>NOMBRE</th>
+                        <th>CANTIDAD</th>
+                        <th>PRECIO</th>
+                        <th>ELIMINAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>
+                            <img class="tabla__img-carrito" src="../assets/imagenes/Issues-Korn.jpg" alt="Album">
+                        </td>
+                        <td>
+                            Issues - Korn
+                        </td>
+                        <td>
+                            <form action="">
+                                <label for="Cantidad"></label>
+                                <input id="cantidad" name="cantidad" type="number" placeholder="1" min=1 max=100
+                                    required>
+                            </form>
+                        </td>
+                        <td>
+                            $50.00 MXN
+                        </td>
+                        <td>
+                            <button class="material-symbols-outlined button">close</button>
+                        </td>
+                    </tr> -->
+
+                    <!-- <tr>
+                        <td>
+
+                        </td>
+                        <td class="total">
+                            TOTAL
+                        </td>
+                        <td class="total">
+                            $0.00 MXN
+                        </td>
+                        <td>
+
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="seg-fin">
+            <!-- <button>Seguir comprando</button>
+            <button>Finalizar compra</button> -->
+            <a href="../index.html">
+                <p>Seguir comprando</p>
+            </a>
+            <p>Finalizar compra</p>
+        </div>
+    </main>
+</body>
+
+</html>
