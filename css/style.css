@@ -235,6 +235,13 @@ td .button {
     margin: 0 0 0 0;
 }
 
+.tabla2{
+    width: 100%;
+}
+
+/* .tabla2 td{
+    width: 100%;
+} */
 
 .total {
     font-weight: 600;

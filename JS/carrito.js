@@ -30,12 +30,22 @@ function recuperarCarrito(){
     if (carrito.length > 0){
         carrito.forEach(alb => {
             tablaHTML += armarTabla(alb)
-           
-        });
+           });
         tbody.innerHTML = tablaHTML
     }
 }
 recuperarCarrito()
+
+function verCarrito() {
+    if (carrito.length > 0) {
+        console.table(carrito)
+
+        let totalCompra = carrito.reduce((total, album) => total + album.importe, 0).toFixed(2)
+             console.log("El total de la compra es: $ " + totalCompra)
+    } else {
+        console.warn("El carrito está vacío!")
+    }
+}
 
 // function verCarrito() {
 //     if (carrito.length > 0) {
