@@ -23,7 +23,42 @@ function armarTabla(alb){
               
 }
 
+// function recuperarCarrito(){
+//     let tablaHTML = ""
+//     const tbody = document.querySelector("tbody")
+//     const carrito = JSON.parse(localStorage.getItem("miCarrito"))
+//     if (carrito.length > 0){
+//         carrito.forEach(alb => tablaHTML += armarTabla(alb));
+//         tbody.innerHTML = tablaHTML
+//         }
+//         calcularTotalCompra()
+//     }
+// recuperarCarrito()
+
+// const total = document.querySelector('#total')
+
+// const calcularTotalCompra = () => {
+//     let total = 0;
+//     carrito.forEach((producto) => {
+//       total += producto.importe * producto.cantidad;
+//     });
+//     totalCompra.innerHTML = total;
+//     return total
+    
+//   };
+const totalDiv = document.querySelector('#total');
+const totalCompra = document.createElement('h2')
+debugger
 function recuperarCarrito(){
+const calcularTotalCompra = () => {
+        let total = 0;
+        carrito.forEach((producto) => {
+          total += producto.importe;
+        });
+        totalCompra.innerHTML = total;
+        totalDiv.append(totalCompra)
+      };
+
     let tablaHTML = ""
     const tbody = document.querySelector("tbody")
     const carrito = JSON.parse(localStorage.getItem("miCarrito"))
@@ -31,23 +66,10 @@ function recuperarCarrito(){
         carrito.forEach(alb => tablaHTML += armarTabla(alb));
         tbody.innerHTML = tablaHTML
         }
+
         calcularTotalCompra()
     }
-recuperarCarrito()
-
-const total = document.querySelector('#total')
-
-const calcularTotalCompra = () => {
-    let total = 0;
-    carrito.forEach((producto) => {
-      total += producto.importe * producto.cantidad;
-    });
-    totalCompra.innerHTML = total;
-    return total
-    
-  };
-
-
+    recuperarCarrito()
 // const total = document.querySelector(".total")
 // const subTotal = carrito.reduce((acc, album) => acc + album.importe,0).toFixed(2)
 //     total.innerHTML = `${subTotal}`
