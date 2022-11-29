@@ -28,11 +28,30 @@ function recuperarCarrito(){
     const tbody = document.querySelector("tbody")
     const carrito = JSON.parse(localStorage.getItem("miCarrito"))
     if (carrito.length > 0){
-        carrito.forEach(alb => {
-            tablaHTML += armarTabla(alb)
-           });
+        carrito.forEach(alb => tablaHTML += armarTabla(alb));
         tbody.innerHTML = tablaHTML
+        }
+        calcularTotalCompra()
     }
-}
 recuperarCarrito()
 
+const total = document.querySelector('#total')
+
+const calcularTotalCompra = () => {
+    let total = 0;
+    carrito.forEach((producto) => {
+      total += producto.importe * producto.cantidad;
+    });
+    totalCompra.innerHTML = total;
+    return total
+    
+  };
+
+
+// const total = document.querySelector(".total")
+// const subTotal = carrito.reduce((acc, album) => acc + album.importe,0).toFixed(2)
+//     total.innerHTML = `${subTotal}`
+
+
+
+// console.log(subTotal)
